@@ -597,7 +597,7 @@ function About() {
               <p key={i} className="reveal" style={{ fontSize:14,color:T.muted,lineHeight:1.9,marginBottom:18,transitionDelay:`${i*.1}s` }}>{t}</p>
             ))}
             <div className="reveal" style={{ display:"flex",gap:12,marginTop:32,flexWrap:"wrap",transitionDelay:".3s" }}>
-              <a href="https://www.linkedin.com/in/mohit-soni-ab96b21b1/" target="_blank" className="btn-teal">LinkedIn ↗</a>
+              <a href="https://www.linkedin.com/in/mohit-soni-ab96b21b1/" target="_blank" rel="noreferrer" className="btn-teal">LinkedIn ↗</a>
               <a href="mailto:mohitsoni11aug2002@gmail.com" className="btn-outline">Email Me</a>
             </div>
           </div>
@@ -635,7 +635,7 @@ function SkillCard({ skill, idx }) {
 
   const isHex    = skill.shape === "hex";
   const isDiamond= skill.shape === "diamond";
-  const isCircle = skill.shape === "circle";
+  // const isCircle = skill.shape === "circle";
 
   const shapeStyle = isHex
     ? { clipPath:"polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)" }
@@ -1263,7 +1263,7 @@ function Contact() {
                 );
                 const shared = { display:"flex",alignItems:"center",gap:14,padding:"14px 18px",borderRadius:14,background:"rgba(255,255,255,0.6)",border:`1px solid ${T.border}`,backdropFilter:"blur(8px)",transition:"transform .3s,border-color .3s" };
                 return lk.href ? (
-                  <a key={lk.l} href={lk.href} target="_blank" className="reveal" style={{ ...shared,textDecoration:"none",transitionDelay:`${i*.08}s` }}
+                  <a key={lk.l} href={lk.href} target="_blank" rel="noreferrer" className="reveal" style={{ ...shared,textDecoration:"none",transitionDelay:`${i*.08}s` }}
                     onMouseOver={e=>{e.currentTarget.style.transform="translateX(5px)";e.currentTarget.style.borderColor=lk.c+"44";}}
                     onMouseOut={e=>{e.currentTarget.style.transform="";e.currentTarget.style.borderColor=T.border;}}
                   >{inner}</a>
