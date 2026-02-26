@@ -53,8 +53,8 @@ const SKILLS = [
 const EXP = [
   {
     company:"Omfys Technology Pvt Ltd",
-    role:"Jr. Software Developer",
-    period:"2023 — Present", tag:"Current", color:T.teal,
+    role:"Software Developer",
+    period:"April 2025 — Present", tag:"Current", color:T.teal,
     desc:"Building three live product lines simultaneously — HR NOVA (Rasa NLU chatbot), Crest.ai (SQL agents on agentic platform), and AJNA (real-time performance monitoring with Kafka, Redis, MongoDB). Full ownership of API development and Linux services.",
     tech:["Python","Rasa","Kafka","Redis","MongoDB","SQL Agents","Linux","REST APIs"],
   },
@@ -536,9 +536,9 @@ function Hero() {
 
         {/* Subtitle */}
         <div ref={subRef} style={{ display:"flex",alignItems:"center",gap:16,marginBottom:24,flexWrap:"wrap" }}>
-          <span style={{ fontFamily:"'Playfair Display',serif",fontSize:18,fontStyle:"italic",color:T.muted,fontWeight:400 }}>Jr. Software Developer</span>
+          <span style={{ fontFamily:"'Playfair Display',serif",fontSize:18,fontStyle:"italic",color:T.muted,fontWeight:400 }}>Software Developer</span>
           <span style={{ width:1,height:20,background:T.border,flexShrink:0 }} />
-          <span style={{ fontFamily:"'JetBrains Mono',monospace",fontSize:12,color:T.mutedLt,letterSpacing:".04em" }}>Python · AI · APIs · Infra</span>
+          <span style={{ fontFamily:"'JetBrains Mono',monospace",fontSize:12,color:T.mutedLt,letterSpacing:".04em" }}>Python · AI Agents · APIs · Infra · Django · ODA </span>
         </div>
 
         {/* Desc */}
