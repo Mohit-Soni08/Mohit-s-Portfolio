@@ -1172,7 +1172,7 @@ function Contact() {
             ) : (
               <form ref={formRef} onSubmit={sendEmail} style={{ display:"flex",flexDirection:"column",gap:24 }}>
                 <div className="contact-name-row" style={{ display:"grid",gridTemplateColumns:"1fr 1fr",gap:20 }}>
-                  {[["senderName","Your Name","John Doe","text"],["senderEmail","Email Address","john@example.com","email"]].map(([name,label,ph,type]) => (
+                  {[["senderName","Your Name","Name","text"],["senderEmail","Email Address","Email","email"]].map(([name,label,ph,type]) => (
                     <div key={name}>
                       <label style={{ fontFamily:"'JetBrains Mono',monospace",fontSize:10,color:T.mutedLt,letterSpacing:".12em",textTransform:"uppercase",display:"block",marginBottom:8,transition:"color 0.4s" }}>{label}</label>
                       <input type={type} name={name} placeholder={ph} required className="form-field" style={{ height:48 }} value={form[name]} onChange={handleChange} disabled={isSending} />
