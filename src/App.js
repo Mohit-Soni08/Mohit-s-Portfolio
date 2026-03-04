@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from './config/emailjs';
+import logo from "./favicon.png";
 
 /* ═══════════════════════════════════════════════
    DESIGN TOKENS — CSS Variables (the key fix!)
@@ -407,7 +408,18 @@ function Navbar({ active, darkMode, toggleDark }) {
   return (
     <>
       <nav style={{ position:"fixed",top:0,left:0,right:0,zIndex:500,height:64,display:"flex",alignItems:"center",justifyContent:"space-between",padding:"0 clamp(16px,4vw,40px)",background:scrolled?"var(--nav-bg)":"transparent",backdropFilter:scrolled?"blur(20px)":"none",borderBottom:scrolled?`1px solid var(--border)`:"1px solid transparent",transition:"all .4s" }}>
-        <div style={{ fontFamily:"'Playfair Display',serif",fontSize:22,fontWeight:900,color:T.amber,letterSpacing:"-0.5px",flexShrink:0 }}>MS.</div>
+        <div style={{ fontFamily:"'Playfair Display',serif",fontSize:22,fontWeight:900,color:T.amber,letterSpacing:"-0.5px",flexShrink:0 }}>  <img src={logo}
+              alt="MS Logo"
+              style={{
+              marginTop:20,
+              width:50,
+              height:50,
+              borderRadius:"50%",
+              objectFit:"cover",
+              marginBottom:16
+            }}
+            />
+            </div>
         <div className="nav-desktop" style={{ display:"flex",gap:"clamp(8px,1.5vw,20px)" }}>
           {NAV.map(n => (
             <button key={n} className={`nav-link${active===n.toLowerCase()?" active":""}`} onClick={() => go(n.toLowerCase())}>{n}</button>
@@ -1217,7 +1229,19 @@ function Footer() {
       <div className="footer-pad" style={{ borderBottom:`1px solid var(--border)`,padding:"56px 56px 48px",transition:"border-color 0.4s" }}>
         <div className="footer-top-grid" style={{ maxWidth:1200,margin:"0 auto",display:"grid",gridTemplateColumns:"1.4fr 1fr 1fr",gap:48 }}>
           <div>
-            <div style={{ fontFamily:"'Playfair Display',serif",fontSize:42,fontWeight:900,color:T.amber,letterSpacing:"-2px",lineHeight:1,marginBottom:16,transition:"color 0.4s" }}>MS.</div>
+            <div>
+            <img
+              src={logo}
+              alt="MS Logo"
+              style={{
+              width:60,
+              height:60,
+              borderRadius:"30%",
+              objectFit:"cover",
+              marginBottom:16
+            }}
+            />
+          </div>
             <p style={{ fontSize:14,color:T.muted,lineHeight:1.8,maxWidth:280,marginBottom:28,transition:"color 0.4s" }}>
               Software Developer from Pune, India. Building intelligent systems with Python, AI, and real-time infrastructure.
             </p>
@@ -1268,9 +1292,9 @@ function Footer() {
           <span style={{ fontFamily:"'JetBrains Mono',monospace",fontSize:11,color:T.mutedLt,transition:"color 0.4s" }}>© {year} Mohit Soni. All rights reserved.</span>
           <div style={{ display:"flex",alignItems:"center",gap:8 }}>
             <span style={{ width:6,height:6,borderRadius:"50%",background:"var(--teal)",boxShadow:"0 0 6px var(--teal)",transition:"background 0.4s,box-shadow 0.4s" }} />
-            <span style={{ fontFamily:"'JetBrains Mono',monospace",fontSize:11,color:T.mutedLt,transition:"color 0.4s" }}>Open to work · Indore, India</span>
+            <span style={{ fontFamily:"'JetBrains Mono',monospace",fontSize:11,color:T.mutedLt,transition:"color 0.4s" }}>Open to work · Indore, Pune, Mumbai, Banglore</span>
           </div>
-          <span style={{ fontFamily:"'JetBrains Mono',monospace",fontSize:11,color:T.mutedLt,transition:"color 0.4s" }}>Built with React</span>
+          <span style={{ fontFamily:"'JetBrains Mono',monospace",fontSize:11,color:T.mutedLt,transition:"color 0.4s" }}>Build By Mohit</span>
         </div>
       </div>
     </footer>
